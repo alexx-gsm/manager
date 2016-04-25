@@ -110,7 +110,7 @@ class CustomController extends Controller
     {
         if (!$card_id == null) {
             $card = Card::find($card_id);
-            return $card->number ?? '';
+            return isset($card->number) ? $card->number : '';
         } else {
             return '';
         }

@@ -32,7 +32,7 @@ class ObjectController extends Controller
         $object->city = $request->city;
         $object->street = $request->street;
         $object->building = $request->building;
-        $object->flat = $request->flat ?? '';
+        $object->flat = isset($request->flat) ? $request->flat : '';
         $object->save();
 
         return view('objects.object', ['object' => $object,'title' => 'Объект']);

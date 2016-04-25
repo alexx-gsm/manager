@@ -29,7 +29,7 @@
                 <tr id="{{ $card->id }}" onclick="clickTable('/card/', this.id)">
                   <td>{{ $card->number }}</td>
                   <td>{{ $card->type }}</td>
-                  <td>{{ $customs[$card->custom_id] ?? '' }}</td>
+                  <td>{{ isset($customs[$card->custom_id]) ? $customs[$card->custom_id] : '' }}</td>
                 </tr>
               @endforeach
               </tbody>

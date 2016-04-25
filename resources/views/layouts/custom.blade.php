@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css">
     <link rel="stylesheet" href="{{ URL::to('css/main.css') }}">
-    <title>{{ $title ?? 'Главная' }} | ЧистоДА</title>
+    <title>{{ isset($title) ? $title : 'Главная' }} | ЧистоДА</title>
 </head>
 <body>
 @include('common.header')
